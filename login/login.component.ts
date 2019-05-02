@@ -59,6 +59,11 @@ export class LoginComponent implements OnInit {
           this.submitting = false;
         });
     } else {
+      Swal.fire({
+        type: "error",
+        title: "แจ้งเตือน",
+        text: "Login fail!"
+      });
       alert("mistake!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
       this.submitting = false;
     }
