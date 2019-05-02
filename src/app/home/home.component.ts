@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as $ from "jquery";
-import { BackendService } from "../backend.service";
+import { BackendService } from "../../app/backend.service";
 import { Router } from "@angular/router";
 import Swal from "sweetalert2";
 @Component({
