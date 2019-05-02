@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
           this.submitting = false;
         });
     } else {
-      alert("mistake!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
+      alert("!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
       this.submitting = false;
     }
   }
