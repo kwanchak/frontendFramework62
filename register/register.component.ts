@@ -54,12 +54,8 @@ export class RegisterComponent implements OnInit {
         )
         .subscribe(data => {
           if (data) {
-            if (data.status == true) {
-              alert("Register success!");
-              this.router.navigate(["/home"]);
-            } else {
-              alert(data.message);
-            }
+            alert("Register success!");
+            this.router.navigate(["/home"]);
           }
           this.submitting = false;
         });
