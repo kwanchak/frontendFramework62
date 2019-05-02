@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { BackendService } from "../backend.service";
+//import { BackendService } from "../backend.service";
+import { BackendService } from "../src/app/backend.service";
+
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import Swal from "sweetalert2";
 
@@ -39,16 +41,30 @@ export class LoginComponent implements OnInit {
         .login(this.f.username.value, this.f.password.value)
         .subscribe(data => {
           if (data.status) {
-            alert("login success!");
+            Swal.fire({
+              type: "success",
+              title: "สำเร็จ",
+              text: "Login success!"
+            });
+
             this.router.navigate(["/home"]);
           } else {
-            alert("login fail!");
+            Swal.fire({
+              type: "error",
+              title: "แจ้งเตือน",
+              text: "Login fail!"
+            });
             this.router.navigate(["/login"]);
           }
           this.submitting = false;
         });
     } else {
-      alert("Invalid!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
+      Swal.fire({
+        type: "error",
+        title: "แจ้งเตือน",
+        text: "Login fail!"
+      });
+      // alert("mistake!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
       this.submitting = false;
     }
   }
