@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { BackendService } from "../backend.service";
+import { BackendService } from "../src/app/backend.service";
 
 @Component({
   selector: "app-register",
