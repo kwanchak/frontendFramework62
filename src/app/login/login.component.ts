@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 //import { BackendService } from "../backend.service";
-import { BackendService } from "../src/app/backend.service";
+import { BackendService } from "../../app/backend.service";
 
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import Swal from "sweetalert2";
