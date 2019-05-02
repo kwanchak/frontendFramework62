@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
         title: "แจ้งเตือน",
         text: "Login fail!"
       });
-      alert("mistake!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
+      // alert("mistake!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
       this.submitting = false;
     }
   }
